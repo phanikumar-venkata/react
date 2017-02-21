@@ -1,0 +1,57 @@
+import React from "react";
+
+import Article from "../component/Article";
+
+export default class Featured extends React.Component {
+  render() {
+    const Articles = [
+      "Some Article",
+      "Some Other Article",
+      "Yet Another Article",
+      "Still More",
+      "Some Article",
+      "Some Other Article",
+      "Yet Another Article",
+      "Still More",
+      "Some Article",
+      "Some Other Article",
+      "Yet Another Article",
+      "Still More",
+    ].map((title, i) => <Article key={i} title={title}/> );
+
+    const adText = [
+      "Ad spot #1",
+      "Ad spot #2",
+      "Ad spot #3",
+      "Ad spot #4",
+      "Ad spot #5",
+    ];
+
+    const randomAd = adText[Math.round( Math.random() * (adText.length-1) )];
+
+    const randomArticle = Articles[Math.round(Math.random() * (Articles.length -1 ))];
+
+    console.log("featured");
+    return (
+      <div>
+        <div className="page-header">
+          <h1>Featured Articles</h1>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="well text-center">
+              {randomAd}
+            </div>
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-lg-12">
+            {randomArticle}
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
