@@ -19,7 +19,7 @@ export default class NavBar extends React.Component {
 
       //var { pathname } = this.props.location;
      var pathname = this.props.pathname;
-      console.log('NavBar Pathname : ' + pathname);
+      console.log('NavBar Pathname : ..' + pathname);
       console.log(this.props);
 
       const homeLinkStyle = pathname === "/" ? "active" : "";
